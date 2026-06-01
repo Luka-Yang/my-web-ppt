@@ -43,12 +43,14 @@
 <script setup>
 import { ref } from 'vue'
 
+const base = import.meta.env.BASE_URL
+
 const defects = [
-  { id: '01', name: 'Good', src: '/semwad/good.png', description: 'Normal wafer surface without obvious defect patterns.' },
-  { id: '02', name: 'Hole', src: '/semwad/hole.png', description: 'Hole-like surface abnormality that may indicate local material or process issues.' },
-  { id: '03', name: 'Particle', src: '/semwad/particle.png', description: 'Foreign particle or contamination observed on the wafer surface.' },
-  { id: '04', name: 'Scratch', src: '/semwad/scratch.png', description: 'Scratch-like pattern that may reflect mechanical damage or surface disturbance.' },
-  { id: '05', name: 'Pattern Deformation', src: '/semwad/pattern-deformation.png', description: 'Deformation in repeated wafer surface structures or local pattern morphology.' },
+  { id: '01', name: 'Good', src: `${base}semwad/good.png`, description: 'Normal wafer surface without obvious defect patterns.' },
+  { id: '02', name: 'Hole', src: `${base}semwad/hole.png`, description: 'Hole-like surface abnormality that may indicate local material or process issues.' },
+  { id: '03', name: 'Particle', src: `${base}semwad/particle.png`, description: 'Foreign particle or contamination observed on the wafer surface.' },
+  { id: '04', name: 'Scratch', src: `${base}semwad/scratch.png`, description: 'Scratch-like pattern that may reflect mechanical damage or surface disturbance.' },
+  { id: '05', name: 'Pattern Deformation', src: `${base}semwad/pattern-deformation.png`, description: 'Deformation in repeated wafer surface structures or local pattern morphology.' },
 ]
 
 const active = ref(defects[0])
